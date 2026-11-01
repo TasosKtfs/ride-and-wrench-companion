@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Route as RouteIcon, Fuel, Wrench, Gauge, Users, Play, Apple, CloudSun, Bike, MapPin } from "lucide-react";
 import hero from "@/assets/hero-ride.jpg";
+import shotDashboard from "@/assets/ridemind-dashboard.jpg.asset.json";
+import shotWeather from "@/assets/ridemind-weather.jpg.asset.json";
+import shotRide from "@/assets/ridemind-ride.jpg.asset.json";
+import shotExpenses from "@/assets/ridemind-expenses.jpg.asset.json";
+import shotFuel from "@/assets/ridemind-fuel.jpg.asset.json";
+import shotObd from "@/assets/ridemind-obd.png.asset.json";
+import shotGauges from "@/assets/ridemind-gauges.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,6 +27,16 @@ const stats = [
   { value: "4.289", unit: "km", label: "Συνολικά χιλιόμετρα" },
   { value: "2,6", unit: "L", label: "ανά 100 km" },
   { value: "0,27", unit: "€", label: "κόστος / km" },
+];
+
+const screenshots = [
+  { src: shotDashboard.url, alt: "Αρχική οθόνη RideMind με χιλιόμετρα και αυτονομία", caption: "Αρχική — η μηχανή με μια ματιά" },
+  { src: shotWeather.url, alt: "Πρόγνωση καιρού για βόλτα στο RideMind", caption: "Καιρός σήμερα — πότε αξίζει βόλτα" },
+  { src: shotRide.url, alt: "Οθόνη βόλτας με ταχύτητα και κλίση", caption: "Βόλτα — ταχύτητα, κλίση, GPS" },
+  { src: shotObd.url, alt: "Ζωντανά όργανα OBD με στροφόμετρο", caption: "OBD — ζωντανά όργανα κινητήρα" },
+  { src: shotFuel.url, alt: "Κατανάλωση καυσίμου ανά ανεφοδιασμό", caption: "Καύσιμα — κατανάλωση και κόστος" },
+  { src: shotExpenses.url, alt: "Έξοδα μηχανής ανά κατηγορία και μήνα", caption: "Έξοδα — πού πάνε τα χρήματά σου" },
+  { src: shotGauges.url, alt: "Προσαρμογή οργάνων στην οθόνη βόλτας", caption: "Όργανα — φτιάξε τη δική σου οθόνη" },
 ];
 
 const features = [
@@ -80,6 +97,29 @@ function Index() {
               </p>
               <p className="mt-2 text-sm font-semibold text-muted-foreground">{label}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Screenshots */}
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="section-label">Δες την εφαρμογή</p>
+          <h2 className="mt-6 font-display text-3xl font-black italic tracking-tight md:text-5xl">
+            Έτσι δουλεύει <span className="text-primary">στο χέρι σου.</span>
+          </h2>
+          <p className="mt-4 max-w-xl text-muted-foreground">
+            Πραγματικές οθόνες από το RideMind — εδώ με μία Yamaha Tracer στο garage.
+          </p>
+        </div>
+        <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 md:px-[max(1.5rem,calc((100vw-72rem)/2))]">
+          {screenshots.map(({ src, alt, caption }) => (
+            <figure key={caption} className="w-60 shrink-0 snap-center md:w-72">
+              <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-glow">
+                <img src={src} alt={alt} className="aspect-[9/19] w-full object-cover object-top" loading="lazy" />
+              </div>
+              <figcaption className="mt-3 text-center text-sm font-semibold text-muted-foreground">{caption}</figcaption>
+            </figure>
           ))}
         </div>
       </section>
