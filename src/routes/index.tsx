@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Route as RouteIcon, Fuel, Wrench, Gauge, Users, ArrowRight, CloudSun, Bike, MapPin } from "lucide-react";
+import { Route as RouteIcon, Fuel, Wrench, Gauge, Users, Play, Apple, CloudSun, Bike, MapPin } from "lucide-react";
 import hero from "@/assets/hero-ride.jpg";
 
 export const Route = createFileRoute("/")({
