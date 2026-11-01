@@ -56,11 +56,14 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a id="download" href="#features" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-glow transition-transform hover:scale-105">
-              Ξεκίνα τώρα <ArrowRight className="h-5 w-5" />
+              <Play className="h-5 w-5 fill-current" /> Κατέβασε για Android
             </a>
             <div className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-muted-foreground">
-              <CloudSun className="h-4 w-4 text-primary" /> Καιρός για βόλτα, κάθε μέρα
+              <Apple className="h-4 w-4 text-primary" /> Σύντομα και για iOS
             </div>
+          </div>
+          <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+            <CloudSun className="h-4 w-4 text-primary" /> Καιρός για βόλτα, κάθε μέρα
           </div>
         </div>
       </section>
