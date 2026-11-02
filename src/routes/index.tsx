@@ -19,6 +19,7 @@ export const Route = createFileRoute("/")({
 
 type Lang = "el" | "en" | "es";
 const EMAIL = "info@ridemind.eu";
+const PLAY_STORE = "https://play.google.com/store/apps/details?id=gr.ridemind.app";
 
 const t = {
   el: {
