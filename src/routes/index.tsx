@@ -184,7 +184,7 @@ function Index() {
         </h2>
         <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {c.features.map(([title, text], i) => {
-            const Icon = icons[i];
+            const Icon = icons[i] ?? RouteIcon;
             return (
               <div key={i} className="card-stat p-8 transition-colors hover:border-primary/60">
                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary">
