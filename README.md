@@ -1,14 +1,20 @@
-# Welcome to your Lovable project
+# RideMind
+
+θέλω να δημιουργήσω μια σελίδα μια εφαρμογής που έκανα όπου ονομάζεται RideMind και είναι ο συνοδηγός ενός μοτοσικλετιστή 
+
+καθώς καταγράφει βόλτες, κατανάλωση καυσίμου, καταχωρήση services και εργασίες που έχουν γίνει σε κάθε service, συνδέετε με obd ώστε να έχεις το πλήρη έλεγχο της μηχανής/Κινητήρα και στο μέλλον θα προστεθεί και ένα κομμάτι social
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://ride-and-wrench-companion.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/84e3172b-5471-4953-b627-69a4df2da718).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +26,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
