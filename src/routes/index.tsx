@@ -19,6 +19,8 @@ export const Route = createFileRoute("/")({
 
 type Lang = "el" | "en" | "es";
 const EMAIL = "info@ridemind.eu";
+const INSTAGRAM = "https://www.instagram.com/ridemind.eu";
+const LOGO = "/icon-192.png";
 const PLAY_STORE = "https://play.google.com/store/apps/details?id=gr.ridemind.app";
 
 const t = {
@@ -48,6 +50,13 @@ const t = {
     contact: "Επικοινωνία",
     contactText: "Ερωτήσεις, ιδέες ή συνεργασίες; Γράψε μας.",
     footer: "Ο ψηφιακός συνοδηγός του μοτοσικλετιστή",
+    legal: "Νομικά",
+    terms: "Όροι χρήσης",
+    privacy: "Πολιτική απορρήτου",
+    deleteAcc: "Διαγραφή λογαριασμού",
+    follow: "Ακολούθησέ μας",
+    rights: "Με την επιφύλαξη παντός δικαιώματος.",
+    owner: "Το όνομα και το λογότυπο RideMind ανήκουν στον δημιουργό της εφαρμογής.",
   },
   en: {
     download: "Download",
@@ -75,6 +84,13 @@ const t = {
     contact: "Contact",
     contactText: "Questions, ideas or partnerships? Write to us.",
     footer: "The motorcyclist's digital co-rider",
+    legal: "Legal",
+    terms: "Terms of use",
+    privacy: "Privacy policy",
+    deleteAcc: "Delete account",
+    follow: "Follow us",
+    rights: "All rights reserved.",
+    owner: "The RideMind name and logo belong to the app's creator.",
   },
   es: {
     download: "Descargar",
@@ -102,6 +118,13 @@ const t = {
     contact: "Contacto",
     contactText: "¿Preguntas, ideas o colaboraciones? Escríbenos.",
     footer: "El copiloto digital del motorista",
+    legal: "Legal",
+    terms: "Condiciones de uso",
+    privacy: "Política de privacidad",
+    deleteAcc: "Eliminar cuenta",
+    follow: "Síguenos",
+    rights: "Todos los derechos reservados.",
+    owner: "El nombre y el logotipo de RideMind pertenecen al creador de la app.",
   },
 } as const;
 
@@ -232,11 +255,48 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border py-8 text-center">
-        <span className="font-display text-lg font-black italic">RIDE<span className="text-primary">MIND</span></span>
-        <p className="mt-2 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} RideMind — {c.footer} · <a href={`mailto:${EMAIL}`} className="hover:text-primary">{EMAIL}</a>
-        </p>
+      <footer className="border-t border-border">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <img src={LOGO} alt="RideMind" width={44} height={44} className="h-11 w-11 rounded-xl" />
+              <span className="font-display text-2xl font-black italic">RIDE<span className="text-primary">MIND</span></span>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">{c.footer}</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{c.legal}</p>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li><a href="/terms.html" className="hover:text-primary">{c.terms}</a></li>
+              <li><a href="/privacy.html" className="hover:text-primary">{c.privacy}</a></li>
+              <li><a href="/delete-account.html" className="hover:text-primary">{c.deleteAcc}</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{c.contact}</p>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li><a href={`mailto:${EMAIL}`} className="hover:text-primary">{EMAIL}</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{c.follow}</p>
+            <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
+              className="mt-4 inline-grid h-11 w-11 place-items-center rounded-full border border-border text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 border-t border-border px-6 py-5 text-center text-xs text-muted-foreground sm:flex-row sm:text-left">
+          <span className="inline-flex items-center gap-2">
+            <img src={LOGO} alt="" width={20} height={20} className="h-5 w-5 rounded-md" />
+            © {new Date().getFullYear()} RideMind. {c.rights}
+          </span>
+          <span>{c.owner}</span>
+        </div>
       </footer>
     </main>
   );

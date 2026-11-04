@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RideMind · Διαγραφή λογαριασμού</title>
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Fira+Sans+Extra+Condensed:wght@700&display=swap">
+<style>
+:root{--bg:#121416;--fg:#ECE8E1;--muted:#9AA0A6;--line:#30363D;--accent:#FFC24D;--card:#1B1F24;color-scheme:dark}
+@media (prefers-color-scheme: light){:root{--bg:#F2F0EC;--fg:#1B1D20;--muted:#5C6168;--line:#D8D3CA;--accent:#8A5200;--card:#fff;color-scheme:light}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Fira Sans",system-ui,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top,0px)) 16px 48px}
+h1{font-family:"Fira Sans Extra Condensed","Fira Sans",sans-serif;font-size:38px;line-height:1.1;margin:0 0 4px}
+h1 b{color:var(--accent)}
+h2{font-size:19px;margin:28px 0 6px}
+.muted{color:var(--muted)} a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;margin:8px 0} td,th{border-top:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px} .brand img{width:56px;height:56px;border-radius:14px}
+ol li{margin:4px 0} .lang{float:right;font-size:14px}
+</style>
+</head>
+<body><main>
+<div class="brand"><img src="icon-192.png" alt=""><div><h1>Ride<b>Mind</b></h1><div class="muted">Ο έξυπνος συνοδηγός της μοτοσυκλέτας</div></div></div>
+<h2 style="margin-top:0">Διαγραφή λογαριασμού RideMind</h2>
+<p class="muted">Delete your RideMind account · <a href="#en">English</a></p>
+<div class="card">
+<h2 style="margin-top:0">Από την εφαρμογή (άμεσα)</h2>
+<ol>
+<li>Άνοιξε το RideMind και συνδέσου.</li>
+<li>Πάτα το ⚙️ πάνω δεξιά (Ρυθμίσεις).</li>
+<li>Στην ενότητα <b>Λογαριασμός</b> πάτα <b>Διαγραφή λογαριασμού</b> και επιβεβαίωσε.</li>
+</ol>
+<p class="muted" style="margin:0">Για λόγους ασφαλείας μπορεί να σου ζητηθεί να συνδεθείς ξανά λίγο πριν από τη διαγραφή.</p>
+</div>
+<div class="card">
+<h2 style="margin-top:0">Χωρίς την εφαρμογή (με email)</h2>
+<p>Στείλε email στο <a href="mailto:info@ridemind.eu?subject=RideMind%20-%20%CE%94%CE%B9%CE%B1%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CE%BB%CE%BF%CE%B3%CE%B1%CF%81%CE%B9%CE%B1%CF%83%CE%BC%CE%BF%CF%8D">info@ridemind.eu</a> <b>από τη διεύθυνση με την οποία έκανες εγγραφή</b>, με θέμα «RideMind - Διαγραφή λογαριασμού». Η διαγραφή γίνεται μέσα σε 30 ημέρες και θα λάβεις επιβεβαίωση.</p>
+</div>
+<h2>Τι διαγράφεται</h2>
+<ul>
+<li>Ο λογαριασμός σου (email) από το Firebase Authentication και το Cloud Firestore.</li>
+<li>Όλα τα μηνύματα «Σφάλματα & προτάσεις» που έστειλες και οι απαντήσεις τους.</li>
+<li>Με διαγραφή από την εφαρμογή σβήνονται και τα δεδομένα της εφαρμογής στο κινητό (μηχανές, service, βόλτες, αρχεία CSV).</li>
+</ul>
+<p>Δεν κρατάμε κανένα στοιχείο μετά τη διαγραφή.</p>
+<div class="card" id="en">
+<h2 style="margin-top:0">English</h2>
+<p><b>In the app:</b> open RideMind › tap ⚙️ (Settings) › Account › <b>Delete account</b> and confirm. You may be asked to sign in again first.</p>
+<p><b>Without the app:</b> email <a href="mailto:info@ridemind.eu?subject=RideMind%20-%20Delete%20account">info@ridemind.eu</a> from the address you registered with, subject “RideMind - Delete account”. We delete it within 30 days and confirm by email.</p>
+<p><b>What is deleted:</b> your account (email) in Firebase Authentication and Cloud Firestore, and all feedback messages you sent with their replies. In-app deletion also erases the app data on your phone. Nothing is retained after deletion.</p>
+</div>
+<p class="muted small" style="margin-top:36px"><a href="/">Αρχική</a> · <a href="terms.html">Όροι χρήσης</a> · <a href="privacy.html">Πολιτική απορρήτου</a> · <a href="delete-account.html">Διαγραφή λογαριασμού</a> · info@ridemind.eu</p>
+<p class="muted small" style="margin-top:24px">© 2026 RideMind · Με την επιφύλαξη παντός δικαιώματος · All rights reserved.</p>
+</main></body>
+</html>
