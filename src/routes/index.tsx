@@ -135,7 +135,29 @@ const statValues = [
 ];
 const icons = [RouteIcon, Fuel, Wrench, Gauge];
 
+// Προσωρινά: σελίδα «Έρχεται σύντομα». Για να επιστρέψει η κανονική σελίδα: COMING_SOON = false.
+const COMING_SOON = true;
+
+function ComingSoon() {
+  return (
+    <main lang="el" className="flex min-h-screen flex-col bg-background">
+      <div className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
+        <img src={LOGO} alt="RideMind" width={112} height={112} className="h-28 w-28 rounded-3xl shadow-glow" />
+        <span className="font-display text-5xl font-black italic leading-none tracking-tight">
+          RIDE<span className="text-primary">MIND</span>
+        </span>
+        <h1 className="text-xl font-bold uppercase tracking-[0.2em] text-primary">Έρχεται σύντομα</h1>
+      </div>
+    </main>
+  );
+}
+
 function Index() {
+  if (COMING_SOON) return <ComingSoon />;
+  return <FullSite />;
+}
+
+function FullSite() {
   const [lang, setLang] = useState<Lang>("el");
   const c = t[lang];
 
