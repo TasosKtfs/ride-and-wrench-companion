@@ -148,6 +148,13 @@ function ComingSoon() {
         </span>
         <h1 className="text-xl font-bold uppercase tracking-[0.2em] text-primary">Έρχεται σύντομα</h1>
       </div>
+      <footer className="border-t border-border px-6 py-6 text-center text-sm text-muted-foreground">
+        <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <li><a href="/terms.html" className="hover:text-primary">Όροι χρήσης</a></li>
+          <li><a href="/privacy.html" className="hover:text-primary">Πολιτική απορρήτου</a></li>
+        </ul>
+        <p className="mt-3">© 2026 RideMind</p>
+      </footer>
     </main>
   );
 }
